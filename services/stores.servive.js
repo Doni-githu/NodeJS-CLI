@@ -1,7 +1,6 @@
 import os from "os"
-import path from "path";
 import fs from "fs"
-
+import path from "path";
 const FilePath = path.join(os.homedir(), 'weather-data.json')
 
 
@@ -36,8 +35,8 @@ const isExist = async (path) => {
         await fs.promises.stat(path)
         return true
     } catch (error) {
-        return false 
+        return false
     }
 }
 
-export { saveKeyValue, getKeyValue,TOKEN_DICTIONARY}
+export { saveKeyValue, getKeyValue, TOKEN_DICTIONARY }
