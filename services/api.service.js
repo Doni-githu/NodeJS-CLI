@@ -29,7 +29,7 @@ const getWeather = async (city) => {
     const token = process.env.TOKEN ?? await getKeyValue(TOKEN_DICTIONARY.token) ?? "9f7c17db64ba53fe5b6922815f48e196"
 
     if (!token) {
-        throw new Error("API doen't exist, -t [API_KEY] for saving token")
+        throw new Error("API doesn't exist, -t [API_KEY] for saving token")
     }
 
     const { data } = await axios.get('https://api.openweathermap.org/data/2.5/weather', {
